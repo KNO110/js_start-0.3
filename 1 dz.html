@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traacck barr</title>
+    <style>
+        .slider-container {
+            width: 50%;
+            margin: 100px auto;
+            text-align: center;
+        }
+        .slider {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+        <p>Значення: <span id="value">50</span></p>
+    </div>
+
+    <script>  //почему бы и нет
+        const slider = document.getElementById("myRange");
+        const output = document.getElementById("value");
+
+        slider.oninput = function() {
+            output.textContent = this.value;
+        }
+    </script>
+</body>
+</html>
